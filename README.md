@@ -93,7 +93,7 @@ Add the following code in `main.tf`:
 ```hcl
 resource "aws_instance" "my_instance" {
   ami           = "ami-0e2c8caa4b6378d8c"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   tags = {
     Name = "TerraformExample"
