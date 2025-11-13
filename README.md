@@ -176,11 +176,11 @@ Add the following to your `main.tf` file to configure a remote backend with S3:
 ```hcl
 terraform {
   backend "s3" {
-    bucket         = "your-terraform-state-bucket"
+    bucket         = "your-terraform-state-bucket"  # This bucket has to be created separately
     key            = "path/to/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
-    dynamodb_table = "terraform-lock-table"  # Optional, for state locking
+    use_lockfile   = true
   }
 }
 ```
